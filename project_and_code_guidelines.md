@@ -156,7 +156,7 @@ Example:
 ```java
 public class MyClass {
     RecyclerView usersRV;
-    TextView screenTitleLV;
+    TextView screenTitleTV;
     ProgressBar lodaerPB;
 }
 ```
