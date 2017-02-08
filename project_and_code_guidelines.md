@@ -135,10 +135,8 @@ See more info [here](https://source.android.com/source/code-style.html#fully-qua
 
 Fields should be defined at the __top of the file__ and they should follow the naming rules listed below.
 
-* Private, non-static field names start with __m__.
-* Private, static field names start with __s__.
-* Other fields start with a lower case letter.
 * Static final fields (constants) are ALL_CAPS_WITH_UNDERSCORES.
+* Fields names should start with a lower case letter and respect the CamelCase naming convention.
 
 Example:
 
@@ -146,13 +144,22 @@ Example:
 public class MyClass {
     public static final int SOME_CONSTANT = 42;
     public int publicField;
-    private static MyClass sSingleton;
-    int mPackagePrivate;
-    private int mPrivate;
-    protected int mProtected;
+    private static AnyClass AnyClass;
+    int packagePrivateField;
+    private int privateField;
+    protected int protectedField;
 }
 ```
+* Fields referencing an Android SDK Widget should __end whith initials of the widget name  in uppder case__
+Example:
 
+```java
+public class MyClass {
+    RecyclerView usersRV;
+    TextView screenTitleLV;
+    ProgressBar lodaerPB;
+}
+```
 ### 2.2.3 Treat acronyms as words
 
 | Good           | Bad            |
